@@ -1,0 +1,13 @@
+<h1>Markets#index</h1>
+<p>Find me in app/views/markets/index.html.erb</p>
+
+<% @markets.each do |market| %>
+  <% if market['county'].downcase == 'cayuga' %>
+    <p><%= market['market_name'] %></p>
+    <p><%= market['address_line_1'] %></p>
+    <p><%= market['zip'] %></p>
+    <p><%= market['county'] %></p>
+    <p><%= market['operation_hours'] %></p>
+    <hr>
+  <% end %>
+<% end %>
